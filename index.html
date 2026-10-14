@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Cheer Registration Display Screen</title>
+
+  <!-- Tailwind CSS & Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS Animations -->
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+    }
+
+    .pulse-glow {
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+      }
+    }
+  </style>
+</head>
+
+<body
+  class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-blue-500 selection:text-white">
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <header
+    class="py-6 px-8 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md flex items-center justify-between sticky top-0 z-30">
+    <div class="flex items-center gap-4">
+      <div
+        class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+        <i class="fa-solid fa-bullhorn text-2xl"></i>
+      </div>
+      <div>
+        <h1
+          class="text-2xl font-extrabold tracking-wide bg-gradient-to-r from-white via-slate-200 to-blue-400 bg-clip-text text-transparent">
+          กิจกรรมเฟื่องฟ้าเกมส์ 69
+        </h1>
+        <p class="text-xs text-slate-400 font-light">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏนครปฐม</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <!-- Config Trigger Button -->
+      <button class="bg-slate-800 hover:bg-slate-700 text-slate-300 p-2.5 rounded-xl border border-slate-700 transition"
+        title="ตั้งค่า Google Sheet & Form Links">
+        <i class="fa-solid fa-gear text-lg"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto p-6 md:p-10 flex flex-col justify-center">
+
+    <div id="homePage" class="space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">ประเภทกีฬาที่รับสมัครกองเชียร์</h2>
+      </div>
+
+      <div id="sportsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- 1. ฟุตบอล -->
+        <a href="./fb/football.html"
+          class="block bg-slate-900/80 border border-slate-800 hover:border-blue-500/60 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden group">
+          <div
+            class="absolute -right-10 -top-10 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all">
+          </div>
+          <div class="flex items-center justify-between mb-4 relative z-10">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white text-xl shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-football"></i>
+            </div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              ฟุตบอล (Football)
+            </h3>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+            <span class="text-slate-500 group-hover:text-slate-400 transition">สแกนลงทะเบียน</span>
+            <div
+              class="inline-flex items-center gap-1.5 bg-blue-600/10 border border-blue-500/30 text-blue-400 group-hover:bg-blue-600 group-hover:text-white px-3 py-1.5 rounded-xl font-medium transition-all shadow-sm">
+              <span>กดเพื่อไปหน้าต่อไป</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- 2. บาสเกตบอล -->
+        <a href="basketball.html"
+          class="block bg-slate-900/80 border border-slate-800 hover:border-amber-500/60 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-amber-500/10 relative overflow-hidden group">
+          <div
+            class="absolute -right-10 -top-10 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all">
+          </div>
+          <div class="flex items-center justify-between mb-4 relative z-10">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-white text-xl shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-basketball"></i>
+            </div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+              บาสเกตบอล (Basketball)
+            </h3>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+            <span class="text-slate-500 group-hover:text-slate-400 transition">สแกนลงทะเบียน</span>
+            <div
+              class="inline-flex items-center gap-1.5 bg-amber-600/10 border border-amber-500/30 text-amber-400 group-hover:bg-amber-600 group-hover:text-white px-3 py-1.5 rounded-xl font-medium transition-all shadow-sm">
+              <span>กดเพื่อไปหน้าต่อไป</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- 3. แชร์บอล -->
+        <a href="chairball.html"
+          class="block bg-slate-900/80 border border-slate-800 hover:border-pink-500/60 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden group">
+          <div
+            class="absolute -right-10 -top-10 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all">
+          </div>
+          <div class="flex items-center justify-between mb-4 relative z-10">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-pink-500 to-rose-600 flex items-center justify-center text-white text-xl shadow-lg shadow-pink-500/20 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-chair"></i>
+            </div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white group-hover:text-pink-400 transition-colors">
+              แชร์บอล (Chairball)
+            </h3>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+            <span class="text-slate-500 group-hover:text-slate-400 transition">สแกนลงทะเบียน</span>
+            <div
+              class="inline-flex items-center gap-1.5 bg-pink-600/10 border border-pink-500/30 text-pink-400 group-hover:bg-pink-600 group-hover:text-white px-3 py-1.5 rounded-xl font-medium transition-all shadow-sm">
+              <span>กดเพื่อไปหน้าต่อไป</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- 4. ฟุตซอล -->
+        <a href="futsal.html"
+          class="block bg-slate-900/80 border border-slate-800 hover:border-cyan-500/60 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden group">
+          <div
+            class="absolute -right-10 -top-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all">
+          </div>
+          <div class="flex items-center justify-between mb-4 relative z-10">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white text-xl shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-stopwatch"></i>
+            </div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              ฟุตซอล (Futsal)
+            </h3>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+            <span class="text-slate-500 group-hover:text-slate-400 transition">สแกนลงทะเบียน</span>
+            <div
+              class="inline-flex items-center gap-1.5 bg-cyan-600/10 border border-cyan-500/30 text-cyan-400 group-hover:bg-cyan-600 group-hover:text-white px-3 py-1.5 rounded-xl font-medium transition-all shadow-sm">
+              <span>กดเพื่อไปหน้าต่อไป</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5. วอลเลย์บอล -->
+        <a href="volleyball.html"
+          class="block bg-slate-900/80 border border-slate-800 hover:border-purple-500/60 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden group">
+          <div
+            class="absolute -right-10 -top-10 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all">
+          </div>
+          <div class="flex items-center justify-between mb-4 relative z-10">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-600 flex items-center justify-center text-white text-xl shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-volleyball"></i>
+            </div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+              วอลเลย์บอล (Volleyball)
+            </h3>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+            <span class="text-slate-500 group-hover:text-slate-400 transition">สแกนลงทะเบียน</span>
+            <div
+              class="inline-flex items-center gap-1.5 bg-purple-600/10 border border-purple-500/30 text-purple-400 group-hover:bg-purple-600 group-hover:text-white px-3 py-1.5 rounded-xl font-medium transition-all shadow-sm">
+              <span>กดเพื่อไปหน้าต่อไป</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- 6. เปตอง -->
+        <a href="petanque.html"
+          class="block bg-slate-900/80 border border-slate-800 hover:border-slate-400/60 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-400/10 relative overflow-hidden group">
+          <div
+            class="absolute -right-10 -top-10 w-32 h-32 bg-slate-400/10 rounded-full blur-2xl group-hover:bg-slate-400/20 transition-all">
+          </div>
+          <div class="flex items-center justify-between mb-4 relative z-10">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-slate-600 to-slate-800 flex items-center justify-center text-white text-xl shadow-lg shadow-slate-500/20 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-circle"></i>
+            </div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white group-hover:text-slate-300 transition-colors">
+              เปตอง (Pétanque)
+            </h3>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+            <span class="text-slate-500 group-hover:text-slate-400 transition">สแกนลงทะเบียน</span>
+            <div
+              class="inline-flex items-center gap-1.5 bg-slate-700/30 border border-slate-500/30 text-slate-300 group-hover:bg-slate-600 group-hover:text-white px-3 py-1.5 rounded-xl font-medium transition-all shadow-sm">
+              <span>กดเพื่อไปหน้าต่อไป</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- 7. แบดมินตัน -->
+        <a href="badminton.html"
+          class="block bg-slate-900/80 border border-slate-800 hover:border-emerald-500/60 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-500/10 relative overflow-hidden group">
+          <div
+            class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all">
+          </div>
+          <div class="flex items-center justify-between mb-4 relative z-10">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-white text-xl shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-feather-pointed"></i>
+            </div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+              แบดมินตัน (Badminton)
+            </h3>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+            <span class="text-slate-500 group-hover:text-slate-400 transition">สแกนลงทะเบียน</span>
+            <div
+              class="inline-flex items-center gap-1.5 bg-emerald-600/10 border border-emerald-500/30 text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white px-3 py-1.5 rounded-xl font-medium transition-all shadow-sm">
+              <span>กดเพื่อไปหน้าต่อไป</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- 8. เทเบิลเทนนิส -->
+        <a href="tabletennis.html"
+          class="block bg-slate-900/80 border border-slate-800 hover:border-red-500/60 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden group">
+          <div
+            class="absolute -right-10 -top-10 w-32 h-32 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all">
+          </div>
+          <div class="flex items-center justify-between mb-4 relative z-10">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-red-500 to-rose-600 flex items-center justify-center text-white text-xl shadow-lg shadow-red-500/20 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+            </div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white group-hover:text-red-400 transition-colors">
+              เทเบิลเทนนิส (Table Tennis)
+            </h3>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+            <span class="text-slate-500 group-hover:text-slate-400 transition">สแกนลงทะเบียน</span>
+            <div
+              class="inline-flex items-center gap-1.5 bg-red-600/10 border border-red-500/30 text-red-400 group-hover:bg-red-600 group-hover:text-white px-3 py-1.5 rounded-xl font-medium transition-all shadow-sm">
+              <span>กดเพื่อไปหน้าต่อไป</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+
+        <!-- 9. เซปักตะกร้อ -->
+        <a href="takraw.html"
+          class="block bg-slate-900/80 border border-slate-800 hover:border-yellow-500/60 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-yellow-500/10 relative overflow-hidden group">
+          <div
+            class="absolute -right-10 -top-10 w-32 h-32 bg-yellow-500/10 rounded-full blur-2xl group-hover:bg-yellow-500/20 transition-all">
+          </div>
+          <div class="flex items-center justify-between mb-4 relative z-10">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-yellow-500 to-amber-600 flex items-center justify-center text-white text-xl shadow-lg shadow-yellow-500/20 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-bowling-ball"></i>
+            </div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors">
+              เซปักตะกร้อ (Sepak Takraw)
+            </h3>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+            <span class="text-slate-500 group-hover:text-slate-400 transition">สแกนลงทะเบียน</span>
+            <div
+              class="inline-flex items-center gap-1.5 bg-yellow-600/10 border border-yellow-500/30 text-yellow-400 group-hover:bg-yellow-600 group-hover:text-white px-3 py-1.5 rounded-xl font-medium transition-all shadow-sm">
+              <span>กดเพื่อไปหน้าต่อไป</span>
+              <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+
+  </main>
+
+  <!-- ==================== FOOTER SECTION ==================== -->
+  <footer class="py-4 px-8 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-500">
+    คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏนครปฐม
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
