@@ -455,17 +455,11 @@
     </section>
 
     <!-- TAB 3: เชียร์หลีดเดอร์ (Cheerleader) -->
+    <!-- TAB 3: เชียร์หลีดเดอร์ (Cheerleader) -->
     <section id="cheerleader" class="tab-content">
       <div
         class="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 lg:p-12 shadow-2xl backdrop-blur-xl relative overflow-hidden">
-        <!-- ปุ่ม Instagram อยู่มุมขวาบนของการ์ดหลัก -->
-        <a href="https://www.instagram.com/cheerleadsci_npru?utm_source=ig_web_button_share_sheet&exln=ZDNlZDc0MzIxNw%3D%3D"
-          target="_blank" rel="noopener noreferrer"
-          class="absolute top-6 right-6 lg:top-8 lg:right-8 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 active:scale-95 text-white px-4 py-2 rounded-2xl font-bold text-xs lg:text-sm shadow-lg shadow-pink-500/20 transition-all flex items-center gap-2 border border-white/20 z-10">
-          <i class="fa-brands fa-instagram text-base lg:text-lg"></i>
-          <span>
-            cheerleadsci_npru</span>
-        </a>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
           <!-- ฝั่งซ้าย: ข้อมูลรายละเอียด + กล่องใส่รูปภาพในเครื่อง -->
@@ -479,19 +473,27 @@
             <div>
               <h2 class="text-4xl lg:text-5xl font-black text-white tracking-wide">เชียร์หลีดเดอร์ (Cheerleader)</h2>
               <p class="text-slate-300 text-base lg:text-lg mt-3 font-light leading-relaxed">
-                เปิดรับสมัครผู้นำเชียร์ คณะวิทยาศาสตร์และเทคโนโลยี ร่วมฝึกซ้อมการแสดง
+                เปิดรับสมัครผู้นำเชียร์ คณะวิทยาศาสตร์และเทคโนโลยี ร่วมฝึกซ้อมการแสดง นำร้องเพลงเชียร์
                 และสร้างความโดดเด่นในกิจกรรมเฟื่องฟ้าเกมส์ 69!
               </p>
             </div>
 
-            <!-- กล่องใส่รูปภาพประกอบกิจกรรมจากในเครื่อง -->
+            <!-- กล่องใส่รูปภาพประกอบกิจกรรมจากในเครื่อง (กดแล้วรูปเด้งขึ้นมา) + ย้ายปุ่ม Instagram มาอยู่บนรูปภาพที่นี่ -->
             <div
               class="relative group overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 aspect-video flex items-center justify-center">
               <img src="/img/lead.png" alt="รูปบรรยากาศเชียร์หลีดเดอร์"
                 onclick="openImageModal(this, 'ภาพบรรยากาศการซ้อมและการแสดงทีมเชียร์หลีดเดอร์')"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100 cursor-pointer" />
+
+              <!-- ปุ่ม Instagram ซ้อนทับอยู่บนมุมขวาบนของรูปภาพ -->
+              <a href="https://www.instagram.com/cheerleadsci_npru" target="_blank" rel="noopener noreferrer"
+                class="absolute top-4 right-4 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:scale-105 active:scale-95 text-white px-3.5 py-2 rounded-xl font-bold text-xs shadow-lg shadow-black/40 transition-all flex items-center gap-1.5 border border-white/20 z-10">
+                <i class="fa-brands fa-instagram text-sm"></i>
+                <span>cheerleadsci_npru</span>
+              </a>
+
               <div
-                class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-4 text-xs text-slate-300 flex items-center gap-2 pointer-events-none">
+                class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-4 text-[11px] lg:text-xs text-slate-300 flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-camera text-pink-400"></i>
                 <span>คลิกที่รูปเพื่อดูภาพขยายใหญ่</span>
               </div>
@@ -513,10 +515,9 @@
           <div
             class="lg:col-span-5 flex flex-col items-center justify-center p-8 bg-slate-950/90 rounded-3xl border border-slate-800/80 space-y-6">
 
-            <!-- QR Code Box (เปลี่ยนเป็นรูปในเครื่องได้ เช่น src="qr-cheerleader.png") -->
+            <!-- QR Code Box -->
             <div class="p-5 bg-white rounded-3xl shadow-2xl pulse-glow">
-              <img
-                src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=https://forms.gle/iHQzQQjeGPEX9uCCA"
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=https://forms.gle/iHQzQQjeGPEX9uCCA"
                 alt="QR Code สำหรับลงทะเบียนเชียร์หลีดเดอร์" class="w-60 h-60 md:w-72 md:h-72 object-contain" />
             </div>
 
@@ -526,10 +527,13 @@
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
               <span>กดเพื่อเปิดแบบฟอร์มลงทะเบียน</span>
             </a>
+
           </div>
+
         </div>
       </div>
     </section>
+
     <!-- TAB 4: มือกลอง (Drummer) -->
     <section id="drummer" class="tab-content">
       <div
