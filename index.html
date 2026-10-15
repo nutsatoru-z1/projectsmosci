@@ -30,71 +30,100 @@
   class="bg-slate-950 text-white min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
 
   <!-- Header & Navbar Section -->
-  <header class="py-5 px-8 border-b border-slate-800/80 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40">
+  <header class="py-4 px-6 md:px-8 border-b border-slate-800/80 bg-slate-900/90 backdrop-blur-md sticky top-0 z-40">
     <div class="max-w-7xl mx-auto flex items-center justify-between relative">
 
       <!-- ฝั่งซ้าย: โลโก้ & ชื่อกิจกรรม -->
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-3 md:gap-4">
         <div
-          class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-blue-500/20">
+          class="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white text-xl md:text-2xl shadow-lg shadow-blue-500/20">
           <i class="fa-solid fa-bullhorn"></i>
         </div>
         <div>
           <h1
-            class="text-xl md:text-2xl font-black tracking-wide bg-gradient-to-r from-white via-slate-200 to-blue-400 bg-clip-text text-transparent">
+            class="text-lg md:text-2xl font-black tracking-wide bg-gradient-to-r from-white via-slate-200 to-blue-400 bg-clip-text text-transparent">
             กิจกรรมเฟื่องฟ้าเกมส์ 69
           </h1>
-          <p class="text-xs text-slate-400 font-light">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏนครปฐม</p>
+          <p class="text-[10px] md:text-xs text-slate-400 font-light">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏนครปฐม
+          </p>
         </div>
       </div>
 
-      <!-- ตรงกลาง: Navbar 5 หัวข้อหลัก -->
-      <!-- เปลี่ยนจาก hidden lg:flex เป็น flex overflow-x-auto max-w-full -->
+      <!-- ตรงกลาง: Navbar แสดงบน Desktop (หน้าจอใหญ่) -->
       <nav
-        class="flex items-center gap-1 bg-slate-950/70 p-1.5 rounded-2xl border border-slate-800/80 backdrop-blur-sm overflow-x-auto max-w-full whitespace-nowrap scrollbar-none">
-
-        <!-- 1. นักกีฬา -->
+        class="hidden lg:flex items-center gap-1 bg-slate-950/70 p-1.5 rounded-2xl border border-slate-800/80 backdrop-blur-sm">
         <button data-tab="athletes" onclick="switchTab('athletes')"
-          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
+          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
           <i class="fa-solid fa-person-running"></i>
           <span>นักกีฬา</span>
         </button>
 
-        <!-- 2. สแตนเชียร์ -->
         <button data-tab="cheerstand" onclick="switchTab('cheerstand')"
-          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
+          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
           <i class="fa-solid fa-users-line"></i>
           <span>สแตนเชียร์</span>
         </button>
 
-        <!-- 3. เชียร์หลีดเดอร์ -->
         <button data-tab="cheerleader" onclick="switchTab('cheerleader')"
-          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
+          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
           <i class="fa-solid fa-award"></i>
           <span>เชียร์หลีดเดอร์</span>
         </button>
 
-        <!-- 4. มือกลอง -->
         <button data-tab="drummer" onclick="switchTab('drummer')"
-          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
+          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
           <i class="fa-solid fa-drum"></i>
           <span>มือกลอง</span>
         </button>
 
-        <!-- 5. กองเชียร์กีฬา -->
         <button data-tab="sports-cheer" onclick="switchTab('sports-cheer')"
-          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
+          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
           <i class="fa-solid fa-bullhorn"></i>
           <span>กองเชียร์กีฬา</span>
         </button>
-
       </nav>
 
-      <!-- ฝั่งขวา: ปุ่มตั้งค่า -->
-      <div class="flex items-center gap-3">
-
+      <!-- ฝั่งขวา: ปุ่ม Hamburger Menu สำหรับจอมือถือ (lg:hidden) -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <button onclick="toggleMobileMenu()" id="hamburgerBtn"
+          class="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700/60 text-slate-200 hover:text-white hover:bg-slate-700 flex items-center justify-center transition text-lg">
+          <i class="fa-solid fa-bars" id="hamburgerIcon"></i>
+        </button>
       </div>
 
+    </div>
+
+    <!-- เมนูลอยสำหรับมือถือ (Mobile Dropdown Menu) -->
+    <div id="mobileMenu" class="hidden lg:hidden mt-4 pt-3 border-t border-slate-800/80 space-y-1.5 transition-all">
+      <button data-tab="athletes" onclick="switchTab('athletes')"
+        class="nav-btn w-full px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:bg-slate-800/80 transition-all flex items-center gap-3 border border-transparent">
+        <i class="fa-solid fa-person-running text-blue-400 w-5"></i>
+        <span>นักกีฬา</span>
+      </button>
+
+      <button data-tab="cheerstand" onclick="switchTab('cheerstand')"
+        class="nav-btn w-full px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:bg-slate-800/80 transition-all flex items-center gap-3 border border-transparent">
+        <i class="fa-solid fa-users-line text-purple-400 w-5"></i>
+        <span>สแตนเชียร์</span>
+      </button>
+
+      <button data-tab="cheerleader" onclick="switchTab('cheerleader')"
+        class="nav-btn w-full px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:bg-slate-800/80 transition-all flex items-center gap-3 border border-transparent">
+        <i class="fa-solid fa-award text-pink-400 w-5"></i>
+        <span>เชียร์หลีดเดอร์</span>
+      </button>
+
+      <button data-tab="drummer" onclick="switchTab('drummer')"
+        class="nav-btn w-full px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:bg-slate-800/80 transition-all flex items-center gap-3 border border-transparent">
+        <i class="fa-solid fa-drum text-amber-400 w-5"></i>
+        <span>มือกลอง</span>
+      </button>
+
+      <button data-tab="sports-cheer" onclick="switchTab('sports-cheer')"
+        class="nav-btn w-full px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:bg-slate-800/80 transition-all flex items-center gap-3 border border-transparent">
+        <i class="fa-solid fa-bullhorn text-cyan-400 w-5"></i>
+        <span>กองเชียร์กีฬา</span>
+      </button>
     </div>
   </header>
 
@@ -800,8 +829,7 @@
   </div>
 
   <!-- JavaScript สลับ Tab หน้าต่าง -->
-  <script>
-    // กำหนดสีและเงาสำหรับแต่ละหมวดหมู่เมื่อถูกเลือก (Active Class)
+  <script>// 1. สีและสไตล์ของปุ่มเมื่อถูกเลือก (Active Class)
     const tabThemeClasses = {
       'athletes': 'text-white bg-blue-600 shadow-lg shadow-blue-500/30 border-blue-400/30',
       'cheerstand': 'text-white bg-purple-600 shadow-lg shadow-purple-500/30 border-purple-400/30',
@@ -810,78 +838,122 @@
       'sports-cheer': 'text-white bg-blue-600 shadow-lg shadow-blue-500/30 border-blue-400/30'
     };
 
-    const defaultBtnClass = "nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent";
+    const defaultBtnClassDesktop = "nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent";
+    const defaultBtnClassMobile = "nav-btn w-full px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:bg-slate-800/80 transition-all flex items-center gap-3 border border-transparent";
 
-    function switchTab(tabId) {
-      // 1. ซ่อนหน้าต่างเนื้อหาทั้งหมด
-      const contents = document.querySelectorAll('.tab-content');
-      contents.forEach(content => content.classList.remove('active'));
+    // 2. ฟังก์ชัน เปิด-ปิด เมนูลอยบนมือถือ (Hamburger Menu)
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('hamburgerIcon');
+      if (!menu) return;
 
-      // 2. ลบสไตล์ Active ออกจากปุ่มบน Navbar ทั้งหมด
-      const buttons = document.querySelectorAll('.nav-btn');
-      buttons.forEach(btn => {
-        btn.className = defaultBtnClass;
-      });
-
-      // 3. แสดงหน้าต่างเนื้อหาที่เลือก
-      const targetContent = document.getElementById(tabId);
-      if (targetContent) {
-        targetContent.classList.add('active');
-      }
-
-      // 4. ใส่สไตล์ Active + สีประจำหมวดหมู่ให้ปุ่มที่ถูกกด
-      const targetBtn = document.querySelector(`[data-tab="${tabId}"]`);
-      if (targetBtn) {
-        const activeTheme = tabThemeClasses[tabId] || tabThemeClasses['sports-cheer'];
-        targetBtn.className = `nav-btn active-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border ${activeTheme}`;
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        if (icon) icon.className = 'fa-solid fa-xmark';
+      } else {
+        menu.classList.add('hidden');
+        if (icon) icon.className = 'fa-solid fa-bars';
       }
     }
 
-    // ทำงานทันทีเมื่อโหลดหน้าเว็บ
-    document.addEventListener("DOMContentLoaded", () => {
-      // ตรวจสอบ Hash จาก URL (เช่น index.html#athletes)
-      const hash = window.location.hash.replace('#', '');
-      if (hash && document.getElementById(hash)) {
-        switchTab(hash);
-      } else {
-        switchTab('sports-cheer'); // ตั้งค่าหน้าเริ่มต้นเป็น กองเชียร์กีฬา
-      }
-    });
+    // 3. ฟังก์ชัน หลักในการสลับแท็บ
+    function switchTab(tabId) {
+      // ซ่อนเนื้อหาทั้งหมดก่อน
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => {
+        content.classList.remove('active');
+        content.classList.add('hidden');
+      });
 
-    // รองรับการเปลี่ยน Hash ขณะอยู่ที่หน้าเดิม
-    window.addEventListener("hashchange", () => {
-      const hash = window.location.hash.replace('#', '');
-      if (hash && document.getElementById(hash)) {
-        switchTab(hash);
+      // แสดงเฉพาะเนื้อหาที่เลือก
+      const targetContent = document.getElementById(tabId);
+      if (targetContent) {
+        targetContent.classList.remove('hidden');
+        targetContent.classList.add('active');
       }
-    });
 
+      // รีเซ็ตสไตล์ปุ่มทั้งหมด
+      const buttons = document.querySelectorAll('.nav-btn');
+      buttons.forEach(btn => {
+        if (btn.classList.contains('w-full')) {
+          btn.className = defaultBtnClassMobile;
+        } else {
+          btn.className = defaultBtnClassDesktop;
+        }
+      });
+
+      // ใส่สไตล์สี Active ให้ปุ่มที่สอดคล้องกับ tabId
+      const targetBtns = document.querySelectorAll(`[data-tab="${tabId}"]`);
+      const activeTheme = tabThemeClasses[tabId] || tabThemeClasses['sports-cheer'];
+
+      targetBtns.forEach(btn => {
+        if (btn.classList.contains('w-full')) {
+          btn.className = `nav-btn w-full px-4 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-3 border ${activeTheme}`;
+        } else {
+          btn.className = `nav-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border ${activeTheme}`;
+        }
+      });
+
+      // ปิดเมนูลอยมือถือเมื่อกดเลือกแท็บแล้ว
+      const mobileMenu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('hamburgerIcon');
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        if (icon) icon.className = 'fa-solid fa-bars';
+      }
+    }
+
+    // 4. ฟังก์ชัน สำหรับรูปเด้ง Modal
     function openImageModal(imgElement, captionText) {
       const modal = document.getElementById('imageModal');
       const modalImg = document.getElementById('modalImage');
       const modalCap = document.getElementById('modalCaption');
 
-      modalImg.src = imgElement.src;
-      modalCap.innerText = captionText || imgElement.alt || '';
-
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // ป้องกันการสกอร์ลหน้าจอซ้อน
+      if (modal && modalImg) {
+        modalImg.src = imgElement.src;
+        modalCap.innerText = captionText || imgElement.alt || '';
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     function closeImageModal() {
       const modal = document.getElementById('imageModal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = 'auto'; // คืนค่าสกอร์ล
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
     }
 
-    // กดปุ่ม ESC หรือกดพื้นที่ว่างเพื่อปิดได้
+    // Event Listeners สำหรับ Modal
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeImageModal();
     });
-    document.getElementById('imageModal').addEventListener('click', (e) => {
-      if (e.target.id === 'imageModal') closeImageModal();
+
+    const modalElem = document.getElementById('imageModal');
+    if (modalElem) {
+      modalElem.addEventListener('click', (e) => {
+        if (e.target.id === 'imageModal') closeImageModal();
+      });
+    }
+
+    // 5. ทำงานทันทีเมื่อโหลดหน้าเว็บ (รองรับ Hash #athletes)
+    document.addEventListener("DOMContentLoaded", () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && document.getElementById(hash)) {
+        switchTab(hash);
+      } else {
+        switchTab('sports-cheer'); // แท็บเริ่มต้น
+      }
     });
-  </script>
+
+    window.addEventListener("hashchange", () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && document.getElementById(hash)) {
+        switchTab(hash);
+      }
+    });</script>
 
 </body>
 
