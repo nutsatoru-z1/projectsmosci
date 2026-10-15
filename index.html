@@ -49,40 +49,41 @@
       </div>
 
       <!-- ตรงกลาง: Navbar 5 หัวข้อหลัก -->
+      <!-- เปลี่ยนจาก hidden lg:flex เป็น flex overflow-x-auto max-w-full -->
       <nav
-        class="hidden lg:flex items-center gap-1 bg-slate-950/70 p-1.5 rounded-2xl border border-slate-800/80 backdrop-blur-sm">
+        class="flex items-center gap-1 bg-slate-950/70 p-1.5 rounded-2xl border border-slate-800/80 backdrop-blur-sm overflow-x-auto max-w-full whitespace-nowrap scrollbar-none">
 
         <!-- 1. นักกีฬา -->
         <button data-tab="athletes" onclick="switchTab('athletes')"
-          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
+          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
           <i class="fa-solid fa-person-running"></i>
           <span>นักกีฬา</span>
         </button>
 
         <!-- 2. สแตนเชียร์ -->
         <button data-tab="cheerstand" onclick="switchTab('cheerstand')"
-          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
+          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
           <i class="fa-solid fa-users-line"></i>
           <span>สแตนเชียร์</span>
         </button>
 
         <!-- 3. เชียร์หลีดเดอร์ -->
         <button data-tab="cheerleader" onclick="switchTab('cheerleader')"
-          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
+          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
           <i class="fa-solid fa-award"></i>
           <span>เชียร์หลีดเดอร์</span>
         </button>
 
         <!-- 4. มือกลอง -->
         <button data-tab="drummer" onclick="switchTab('drummer')"
-          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
+          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
           <i class="fa-solid fa-drum"></i>
           <span>มือกลอง</span>
         </button>
 
         <!-- 5. กองเชียร์กีฬา -->
         <button data-tab="sports-cheer" onclick="switchTab('sports-cheer')"
-          class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 border border-transparent">
+          class="nav-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-2 shrink-0 border border-transparent">
           <i class="fa-solid fa-bullhorn"></i>
           <span>กองเชียร์กีฬา</span>
         </button>
