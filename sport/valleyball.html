@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รับสมัครกองเชียร์วอลเลย์บอล | Sports Cheer Portal</title>
+  
+  <!-- Tailwind CSS & Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Kanit', sans-serif; }
+    .pulse-glow { animation: pulseGlow 2s infinite ease-in-out; }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 25px rgba(168, 85, 247, 0.4); }
+      50% { box-shadow: 0 0 50px rgba(168, 85, 247, 0.8); }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+
+  <!-- Header Section -->
+  <header class="py-6 px-8 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md flex items-center justify-between sticky top-0 z-30">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-purple-500/30">
+        <i class="fa-solid fa-volleyball"></i>
+      </div>
+      <div>
+        <h1 class="text-2xl font-extrabold tracking-wide bg-gradient-to-r from-white via-slate-200 to-purple-400 bg-clip-text text-transparent">
+          รับสมัครกองเชียร์วอลเลย์บอล (Volleyball)
+        </h1>
+        <p class="text-xs text-slate-400 font-light">เปิดกล้องมือถือเพื่อสแกน QR Code ลงทะเบียนเข้า Google Form</p>
+      </div>
+    </div>
+
+    <!-- ปุ่มย้อนกลับหน้าหลัก -->
+    <a href="../index.html" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-xl border border-slate-700 transition text-sm font-medium">
+      <i class="fa-solid fa-arrow-left"></i> ย้อนกลับหน้าหลัก
+    </a>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-6 md:p-10 flex flex-col justify-center my-auto">
+    
+    <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-10 lg:p-14 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: ข้อมูลและตัวเลขที่นั่งคงเหลือ -->
+        <div class="lg:col-span-6 space-y-6">
+          <div id="statusBadge" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>OPEN • กำลังเปิดรับสมัคร</span>
+          </div>
+
+          <div>
+            <h2 class="text-4xl lg:text-5xl font-black text-white tracking-wide">วอลเลย์บอล (Volleyball)</h2>
+            <p class="text-slate-300 text-base lg:text-lg mt-3 font-light leading-relaxed">
+              เปิดรับสมัครกองเชียร์เข้าร่วมตบมือสร้างจังหวะ และส่งเสียงเชียร์ติดขอบสนาม
+            </p>
+          </div>
+
+          <!-- Box สรุปจำนวนที่นั่ง -->
+          <div class="bg-slate-950/80 border border-slate-800 rounded-3xl p-8 space-y-4">
+            <div class="flex items-center justify-between text-base font-semibold text-slate-400">
+              <span>จำนวนโควตาทั้งหมด</span>
+              <span class="text-white text-lg">120 ที่นั่ง</span>
+            </div>
+
+            <div class="flex items-center justify-between border-t border-slate-800/80 pt-4">
+              <span class="text-lg text-slate-300 font-medium">จำนวนที่ว่างคงเหลือ</span>
+              <div class="text-right flex items-baseline gap-2">
+                <span id="remainingSeats" class="text-7xl lg:text-8xl font-black text-emerald-400 tracking-tight">--</span>
+                <span class="text-lg text-slate-400 font-medium">ที่นั่ง</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-sm text-slate-400 flex items-center gap-2.5 pt-1">
+            <i class="fa-solid fa-circle-info text-purple-400 text-lg"></i>
+            <span>สแกน QR Code ทางขวามือเพื่อกรอกข้อมูลใน Google Form</span>
+          </div>
+        </div>
+
+        <!-- Right Column: รูป QR Code สำหรับสแกน -->
+        <div class="lg:col-span-6 flex flex-col items-center justify-center p-8 bg-slate-950/90 rounded-3xl border border-slate-800/80">
+          
+          <div class="p-5 bg-white rounded-3xl shadow-2xl pulse-glow mb-5">
+            <!-- ใส่ URL รูป QR Code ของ Google Form วอลเลย์บอล -->
+            <img 
+              src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=https://forms.gle/ZbKMATxGNV8fJXFp6" 
+              alt="QR Code สำหรับลงทะเบียน Google Form" 
+              class="w-64 h-64 md:w-80 md:h-80 object-contain"
+            />
+          </div>
+
+          <p class="text-base md:text-lg text-slate-200 font-semibold text-center flex items-center gap-2">
+            <i class="fa-solid fa-camera text-purple-400 text-xl"></i> สแกนเพื่อเปิดแบบฟอร์มสมัคร
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 px-8 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-500">
+    Sports Cheerleader Registration System
+  </footer>
+
+  <!-- Script ดึงข้อมูลจาก Google Sheets -->
+  <script>
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzcR-477FzZ0GDJup5mB0At1payMHvc1G_Ki7eWYwkhhrKhuumCZrAGxs1VOVyYzWhH/exec';
+
+    async function fetchRemainingSeats() {
+      const seatsElement = document.getElementById('remainingSeats');
+      const badgeElement = document.getElementById('statusBadge');
+
+      try {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'GET',
+          redirect: 'follow'
+        });
+
+        const data = await response.json();
+
+        // ค้นหาแถวที่มีคำว่า "วอลเลย์บอล" จากชีต total
+        const volleyballData = data.find(item => item.sport && item.sport.includes('วอลเลย์บอล'));
+
+        if (volleyballData) {
+          const seatsLeft = volleyballData.remaining;
+          seatsElement.innerText = seatsLeft;
+
+          if (parseInt(seatsLeft) <= 0) {
+            seatsElement.className = "text-7xl lg:text-8xl font-black text-rose-500 tracking-tight";
+            badgeElement.className = "inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold bg-rose-500/10 text-rose-400 border border-rose-500/30";
+            badgeElement.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span><span>CLOSED • ปิดรับสมัครแล้ว</span>`;
+          }
+        }
+      } catch (error) {
+        console.error('เกิดข้อผิดพลาดในการดึงข้อมูล:', error);
+        if (seatsElement) {
+          seatsElement.innerText = "Error";
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetchRemainingSeats();
+    });
+
+    setInterval(fetchRemainingSeats, 10000);
+  </script>
+
+</body>
+</html>
